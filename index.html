@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterTech - Curso de Reparação Automotiva</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Estilos Gerais */
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1485291571150-772bcfc10da5');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Seção Benefícios */
+        .beneficios {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+
+        .beneficios h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .beneficios h2 {
+            text-align: center;
+            color: #666;
+            margin-bottom: 50px;
+        }
+
+        .topicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .topico {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Seção Especialista */
+        .especialista {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .especialista-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .especialista-img {
+            width: 300px;
+            border-radius: 50%;
+        }
+
+        /* Seção Citações */
+        .citacoes {
+            padding: 60px 0;
+            background: #2c3e50;
+            color: white;
+        }
+
+        .citacao {
+            max-width: 800px;
+            margin: 40px auto;
+            font-size: 1.2rem;
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* Seção Inimigo Comum */
+        .inimigo-comum {
+            padding: 80px 20px;
+            background: #e74c3c;
+            color: white;
+            text-align: center;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .especialista-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>MasterTech: Transforme sua Carreira</h1>
+            <h2>Ao longo de 1 mês, vamos abordar temas que podem contribuir para o sucesso da sua carreira profissional no mercado de reparação automotiva</h2>
+            <a href="https://kiwify.app/HnrPYVL" class="cta-button">Inscreva-se Agora</a>
+        </div>
+    </section>
+
+    <!-- Seção Benefícios -->
+    <section class="beneficios">
+        <div class="container">
+            <h1>O que você vai descobrir no MasterTech?</h1>
+            <h2>Principais tópicos do nosso curso</h2>
+            <div class="topicos-grid">
+                <div class="topico">
+                    <h3>Tecnologia Atualizada em Diagnóstico e Reparo</h3>
+                </div>
+                <div class="topico">
+                    <h3>Métodos Eficazes para Diagnóstico de Problemas</h3>
+                </div>
+                <div class="topico">
+                    <h3>Estratégias para Manter Padrões de Qualidade Elevados</h3>
+                </div>
+                <div class="topico">
+                    <h3>Gestão Eficiente de Oficina e Controle de Custos</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Especialista -->
+    <section class="especialista">
+        <div class="container">
+            <div class="especialista-content">
+                <img src="especialista.jpg" alt="Especialista" class="especialista-img">
+                <div>
+                    <h2>Sobre o Especialista</h2>
+                    <p>[Inserir breve biografia do especialista, destacando sua experiência e qualificações no mercado de reparação automotiva.]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Citações -->
+    <section class="citacoes">
+        <div class="container">
+            <div class="citacao">
+                “O conhecimento técnico não é apenas aprender; é aplicar de forma eficiente e inovadora no seu dia a dia.”
+            </div>
+            <div class="citacao">
+                “Cada problema diagnosticado corretamente é um cliente satisfeito e um passo à frente da concorrência.”
+            </div>
+            <div class="citacao">
+                “Manter padrões de qualidade elevados não é um luxo; é uma necessidade em um mercado que evolui rapidamente.”
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Inimigo Comum -->
+    <section class="inimigo-comum">
+        <div class="container">
+            <h2>Nosso inimigo comum é a complacência</h2>
+            <p>Em um mundo onde a tecnologia avança a cada minuto, ficar parado é sinônimo de retrocesso. O MasterTech é sua linha de frente na batalha contra a obsolescência, garantindo que você se mantenha relevante e competitivo.</p>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="hero" style="background-image: none; background-color: #2c3e50; padding: 60px 20px;">
+        <div class="container">
+            <a href="https://kiwify.app/HnrPYVL" class="cta-button">Clique aqui e inscreva-se agora no MasterTech</a>
+            <p style="margin-top: 20px; font-size: 1.1rem;">Transforme conhecimento em poder e poder em sucesso. Estamos prontos para te ajudar a liderar a mudança. Você está?</p>
+        </div>
+    </section>
+</body>
+</html>
