@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MasterTech - Curso Profissional</title>
+    <title>MasterTech - Curso de Reparação Automotiva</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary: #2c3e50;    /* Azul Escuro */
-            --secondary: #e74c3c;  /* Vermelho Alerta */
-            --accent: #3498db;     /* Azul Claro */
-            --light: #ecf0f1;      /* Cinza Claro */
-            --dark: #2c3e50;       /* Azul Escuro */
-            --text: #333333;       /* Cinza Escuro */
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+            --text: #333;
         }
 
         * {
@@ -24,13 +23,11 @@
 
         html {
             scroll-behavior: smooth;
-            font-size: 16px;
         }
 
         body {
             line-height: 1.6;
             color: var(--text);
-            background-color: var(--light);
         }
 
         .container {
@@ -39,229 +36,210 @@
             padding: 0 20px;
         }
 
-        /* ========== HERO SECTION ========== */
+        /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(44,62,80,0.9), rgba(44,62,80,0.9)), url('images/hero-bg.jpg');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg');
             background-size: cover;
-            background-position: center;
             color: white;
-            padding: 120px 20px;
+            text-align: center;
+            padding: 100px 20px;
             min-height: 100vh;
             display: flex;
             align-items: center;
-            text-align: center;
+            justify-content: center;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             margin-bottom: 25px;
-            line-height: 1.2;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .hero h2 {
-            font-size: 1.5rem;
-            font-weight: 300;
+            font-size: 1.4rem;
+            font-weight: 400;
             margin-bottom: 40px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
-        /* ========== BOTÕES CTA ========== */
         .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: var(--secondary);
+            display: inline-block;
+            background: #e74c3c;
             color: white;
-            padding: 16px 48px;
-            border-radius: 50px;
+            padding: 15px 40px;
             text-decoration: none;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(231,76,60,0.3);
+            border-radius: 30px;
+            font-size: 1.2rem;
+            transition: transform 0.3s;
         }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(231,76,60,0.4);
-            background: #c0392b;
-        }
-
-        /* ========== SEÇÃO BENEFÍCIOS ========== */
+        /* Seção Benefícios */
         .beneficios {
             padding: 80px 0;
-            background: white;
-        }
-
-        .beneficios h1 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 50px;
+            background: var(--light);
         }
 
         .topicos-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            padding: 0 20px;
         }
 
         .topico {
             background: white;
             padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-            border: 1px solid #eee;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .topico:hover {
-            transform: translateY(-10px);
-        }
-
-        .topico h3 {
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-
-        /* ========== SEÇÃO ESPECIALISTA ========== */
+        /* Seção Especialista */
         .especialista {
-            padding: 100px 0;
-            background: var(--light);
+            padding: 80px 0;
+            background: white;
         }
 
         .especialista-content {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 50px;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
             align-items: center;
         }
 
         .especialista-img {
             width: 100%;
-            max-width: 500px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin: 0 auto;
+            border-radius: 10px;
         }
 
-        .expertise-list {
-            list-style: none;
-            margin: 30px 0;
-        }
-
-        .expertise-list li {
-            padding: 15px 0;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            border-bottom: 1px solid #ddd;
-            font-size: 1.1rem;
-        }
-
-        /* ========== SEÇÃO CITAÇÕES ========== */
+        /* Seção Citações */
         .citacoes {
-            padding: 100px 0;
+            padding: 80px 0;
             background: var(--primary);
             color: white;
         }
 
         .citacao {
             max-width: 800px;
-            margin: 0 auto;
-            padding: 40px;
+            margin: 40px auto;
             text-align: center;
-            font-size: 1.3rem;
-            line-height: 1.8;
-            position: relative;
+            font-style: italic;
         }
 
-        .citacao:before {
-            content: '"';
-            font-size: 4rem;
-            color: var(--secondary);
-            position: absolute;
-            left: -20px;
-            top: -30px;
-            opacity: 0.3;
+        /* Seção Inimigo Comum */
+        .inimigo-comum {
+            padding: 80px 20px;
+            background: var(--secondary);
+            color: white;
+            text-align: center;
         }
 
-        /* ========== RESPONSIVIDADE ========== */
+        /* CTA Final */
+        .cta-final {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero h2 {
-                font-size: 1.2rem;
-            }
-
             .especialista-content {
                 grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .expertise-list li {
-                justify-content: center;
-            }
-        }
-
-        @media (min-width: 992px) {
-            .especialista-content {
-                grid-template-columns: 1fr 2fr;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
+    <!-- 1. Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Transforme sua Carreira Automotiva</h1>
-            <h2>Domine as técnicas mais modernas de reparação automotiva com especialistas do mercado</h2>
-            <a href="https://pay.kiwify.com.br/Se64O5p" class="cta-button" target="_blank" rel="noopener noreferrer">
-                Garantir Vaga
-                <i class="fas fa-arrow-right"></i>
-            </a>
+            <h1>MasterTech: Transforme sua Carreira</h1>
+            <h2>Ao longo de 1 mês, vamos abordar temas que podem contribuir para o sucesso da sua carreira profissional no mercado de reparação automotiva</h2>
+            <a href="https://kiwify.app/HnrPYVL" class="cta-button" target="_blank">Inscreva-se Agora</a>
         </div>
     </section>
 
-    <!-- Seção Benefícios -->
+    <!-- 2. Benefícios -->
     <section class="beneficios">
         <div class="container">
-            <h1>O Que Você Vai Dominar</h1>
+            <h1>O que você vai descobrir no MasterTech?</h1>
+            <h2>Principais tópicos do nosso curso</h2>
             <div class="topicos-grid">
-                <!-- Conteúdo mantido igual -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção Especialista -->
-    <section class="especialista">
-        <div class="container">
-            <div class="especialista-content">
-                <img src="images/especialista.jpg" alt="Especialista" class="especialista-img">
-                <div>
-                    <!-- Conteúdo mantido igual -->
+                <div class="topico">
+                    <h3>Tecnologia Atualizada em Diagnóstico e Reparo</h3>
+                    <p>Domine os sistemas mais modernos do mercado</p>
+                </div>
+                <div class="topico">
+                    <h3>Métodos Eficazes para Diagnóstico de Problemas</h3>
+                    <p>Técnicas comprovadas para identificação precisa</p>
+                </div>
+                <div class="topico">
+                    <h3>Estratégias para Manter Padrões de Qualidade Elevados</h3>
+                    <p>Processos para excelência operacional contínua</p>
+                </div>
+                <div class="topico">
+                    <h3>Gestão Eficiente de Oficina e Controle de Custos</h3>
+                    <p>Otimização de recursos e aumento da lucratividade</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Demais seções mantidas -->
+    <!-- 3. Sobre o Especialista -->
+    <section class="especialista">
+        <div class="container">
+            <div class="especialista-content">
+                <img src="especialista.jpg" alt="Especialista" class="especialista-img">
+                <div>
+                    <h2>Sobre o Especialista</h2>
+                    <p>[Inserir breve biografia com 12+ anos de experiência, formação acadêmica e atuação em múltiplos estados]</p>
+                    <div class="topicos-grid" style="margin-top: 30px;">
+                        <div class="topico">
+                            <h4>Experiência Comprovada</h4>
+                            <p>+200 profissionais capacitados</p>
+                        </div>
+                        <div class="topico">
+                            <h4>Atuação Nacional</h4>
+                            <p>7 estados brasileiros</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Citações -->
+    <section class="citacoes">
+        <div class="container">
+            <div class="citacao">
+                “O conhecimento técnico não é apenas aprender; é aplicar de forma eficiente e inovadora no seu dia a dia.”
+            </div>
+            <div class="citacao">
+                “Cada problema diagnosticado corretamente é um cliente satisfeito e um passo à frente da concorrência.”
+            </div>
+            <div class="citacao">
+                “Manter padrões de qualidade elevados não é um luxo; é uma necessidade em um mercado que evolui rapidamente.”
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Inimigo Comum -->
+    <section class="inimigo-comum">
+        <div class="container">
+            <h2>Nosso inimigo comum é a complacência</h2>
+            <p>Em um mundo onde a tecnologia avança a cada minuto, ficar parado é sinônimo de retrocesso. O MasterTech é sua linha de frente na batalha contra a obsolescência, garantindo que você se mantenha relevante e competitivo.</p>
+        </div>
+    </section>
+
+    <!-- 6. CTA Final -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Transforme conhecimento em poder e poder em sucesso</h2>
+            <p>Estamos prontos para te ajudar a liderar a mudança. Você está?</p>
+            <a href="https://kiwify.app/HnrPYVL" class="cta-button" target="_blank">Clique aqui e inscreva-se agora no MasterTech</a>
+        </div>
+    </section>
 
     <script>
-        // Smooth scroll para links internos
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+        // Controle de clicks nos CTAs
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function(e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                window.open(this.href, '_blank');
             });
         });
 
@@ -269,12 +247,16 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if(entry.isIntersecting) {
-                    entry.target.classList.add('animate__fadeInUp');
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, { threshold: 0.1 });
+        });
 
         document.querySelectorAll('.topico, .citacao').forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
             observer.observe(el);
         });
     </script>
