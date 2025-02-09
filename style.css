@@ -1,10 +1,9 @@
-/* Reset e Variáveis Globais */
 :root {
     --primary: #2c3e50;
     --secondary: #e74c3c;
     --light: #f8f9fa;
     --dark: #2c3e50;
-    --text: #333333;
+    --text: #333;
 }
 
 * {
@@ -23,21 +22,20 @@ body {
     color: var(--text);
 }
 
-/* Container Principal */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Seção Hero */
+/* Hero Section */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
-    padding: 120px 20px;
+    padding: 100px 20px;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -47,7 +45,6 @@ body {
 .hero h1 {
     font-size: 2.8rem;
     margin-bottom: 25px;
-    line-height: 1.2;
 }
 
 .hero h2 {
@@ -56,7 +53,6 @@ body {
     margin-bottom: 40px;
 }
 
-/* Botões CTA */
 .cta-button {
     display: inline-flex;
     align-items: center;
@@ -64,9 +60,9 @@ body {
     background: var(--secondary);
     color: white;
     padding: 15px 45px;
-    border-radius: 30px;
     text-decoration: none;
-    font-weight: 500;
+    border-radius: 30px;
+    font-size: 1.2rem;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -81,9 +77,15 @@ body {
     background: var(--light);
 }
 
+.beneficios h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
 .topicos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 50px;
 }
@@ -93,11 +95,6 @@ body {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-}
-
-.topico h3 {
-    color: var(--primary);
-    margin-bottom: 15px;
 }
 
 /* Seção Especialista */
@@ -140,9 +137,9 @@ body {
 }
 
 .citacao {
-    font-size: 1.2rem;
     max-width: 800px;
     margin: 40px auto;
+    font-size: 1.2rem;
     text-align: center;
     font-style: italic;
 }
@@ -156,7 +153,7 @@ body {
 }
 
 /* Footer */
-.footer {
+footer {
     background: var(--dark);
     color: white;
     padding: 40px 0;
@@ -172,15 +169,10 @@ body {
     .hero h2 {
         font-size: 1.2rem;
     }
-
-    .especialista-content {
-        grid-template-columns: 1fr;
-    }
 }
 
 @media (min-width: 992px) {
     .especialista-content {
         grid-template-columns: 1fr 2fr;
-        align-items: start;
     }
 }
