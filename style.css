@@ -1,11 +1,14 @@
+/* ========== VARIÁVEIS GLOBAIS ========== */
 :root {
-    --primary: #2c3e50;
-    --secondary: #e74c3c;
-    --light: #f8f9fa;
-    --dark: #2c3e50;
-    --text: #333;
+    --primary: #2c3e50;    /* Azul Escuro Principal */
+    --secondary: #e74c3c;  /* Vermelho de Destaque */
+    --accent: #3498db;     /* Azul Claro Complementar */
+    --light: #ecf0f1;      /* Fundo Claro */
+    --dark: #2c3e50;       /* Azul Escuro */
+    --text: #333;          /* Cor do Texto Principal */
 }
 
+/* ========== RESET E CONFIGURAÇÕES GERAIS ========== */
 * {
     margin: 0;
     padding: 0;
@@ -15,159 +18,243 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
     line-height: 1.6;
     color: var(--text);
+    background-color: var(--light);
+    overflow-x: hidden;
 }
 
+/* ========== LAYOUT PRINCIPAL ========== */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Hero Section */
+/* ========== SEÇÃO HERO ========== */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), 
+                url('images/hero-bg.jpg') center/cover;
     color: white;
-    text-align: center;
-    padding: 100px 20px;
+    padding: 120px 20px;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    text-align: center;
+    position: relative;
 }
 
 .hero h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
     margin-bottom: 25px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .hero h2 {
-    font-size: 1.4rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: 300;
     margin-bottom: 40px;
+    max-width: 800px;
+    margin: 0 auto 40px;
 }
 
+/* ========== BOTÕES CTA ========== */
 .cta-button {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     background: var(--secondary);
     color: white;
-    padding: 15px 45px;
+    padding: 16px 48px;
+    border-radius: 50px;
     text-decoration: none;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(231,76,60,0.3);
+    border: 2px solid transparent;
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+    box-shadow: 0 6px 20px rgba(231,76,60,0.4);
+    background: #c0392b;
+    border-color: rgba(255,255,255,0.2);
 }
 
-/* Seção Benefícios */
+/* ========== SEÇÃO BENEFÍCIOS ========== */
 .beneficios {
     padding: 80px 0;
-    background: var(--light);
+    background: white;
 }
 
 .beneficios h1 {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    color: var(--primary);
+    margin-bottom: 50px;
 }
 
 .topicos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    margin-top: 50px;
 }
 
 .topico {
     background: white;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
 }
 
-/* Seção Especialista */
+.topico:hover {
+    transform: translateY(-10px);
+}
+
+.topico h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ========== SEÇÃO ESPECIALISTA ========== */
 .especialista {
-    padding: 80px 0;
-    background: white;
+    padding: 100px 0;
+    background: var(--light);
 }
 
 .especialista-content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 50px;
+    align-items: center;
 }
 
 .especialista-img {
     width: 100%;
     max-width: 500px;
-    border-radius: 10px;
-    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.especialista-info {
+    padding: 20px;
 }
 
 .expertise-list {
     list-style: none;
-    margin: 25px 0;
+    margin: 30px 0;
 }
 
 .expertise-list li {
-    padding: 12px 0;
+    padding: 15px 0;
     display: flex;
     align-items: center;
     gap: 15px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.1rem;
 }
 
-/* Seção Citações */
+/* ========== SEÇÃO CITAÇÕES ========== */
 .citacoes {
-    padding: 80px 0;
+    padding: 100px 0;
     background: var(--primary);
     color: white;
+    position: relative;
 }
 
 .citacao {
     max-width: 800px;
-    margin: 40px auto;
-    font-size: 1.2rem;
+    margin: 0 auto;
+    padding: 40px;
     text-align: center;
-    font-style: italic;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    position: relative;
 }
 
-/* Seção Inimigo Comum */
+.citacao:before {
+    content: '"';
+    font-size: 4rem;
+    color: var(--secondary);
+    position: absolute;
+    left: -20px;
+    top: -30px;
+    opacity: 0.3;
+}
+
+/* ========== SEÇÃO INIMIGO COMUM ========== */
 .inimigo-comum {
-    padding: 80px 20px;
+    padding: 100px 20px;
     background: var(--secondary);
     color: white;
     text-align: center;
 }
 
-/* Footer */
+.inimigo-comum h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+/* ========== FOOTER ========== */
 footer {
     background: var(--dark);
     color: white;
-    padding: 40px 0;
+    padding: 60px 0;
     text-align: center;
 }
 
-/* Responsividade */
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+/* ========== RESPONSIVIDADE ========== */
 @media (max-width: 768px) {
+    .hero {
+        padding: 80px 20px;
+    }
+
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .hero h2 {
         font-size: 1.2rem;
+    }
+
+    .beneficios h1 {
+        font-size: 2rem;
+    }
+
+    .especialista-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .expertise-list li {
+        justify-content: center;
+        text-align: left;
+    }
+
+    .citacao {
+        font-size: 1.1rem;
+        padding: 20px;
     }
 }
 
@@ -175,4 +262,20 @@ footer {
     .especialista-content {
         grid-template-columns: 1fr 2fr;
     }
+}
+
+/* ========== ANIMAÇÕES ========== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate__fadeInUp {
+    animation: fadeInUp 0.6s ease-out forwards;
 }
