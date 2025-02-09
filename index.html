@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MasterTech - Curso de Reparação Automotiva</title>
+    <title>MasterTech - Curso Profissional de Reparação Automotiva</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
@@ -136,9 +136,53 @@
             text-align: center;
         }
 
+        /* Rodapé */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 20px;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .redes-sociais {
+            display: flex;
+            gap: 10px;
+        }
+
+        .redes-sociais a {
+            color: white;
+            font-size: 1.5rem;
+        }
+
         @media (max-width: 768px) {
             .especialista-content {
                 grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
             }
         }
     </style>
@@ -182,10 +226,13 @@
     <!-- 3. Sobre o Especialista -->
     <section class="especialista">
         <div class="container">
+            <div class="especialista-header">
+                <h2>Felipe Mota</h2>
+                <p>Especialista MasterTech</p>
+            </div>
             <div class="especialista-content">
                 <img src="especialista.jpg" alt="Especialista" class="especialista-img">
                 <div>
-                    <h2>Sobre o Especialista</h2>
                     <p>[Com 12+ anos de experiência, formação acadêmica e atuação em múltiplos estados]</p>
                     <div class="topicos-grid" style="margin-top: 30px;">
                         <div class="topico">
@@ -233,6 +280,49 @@
             <a href="https://pay.kiwify.com.br/Se64O5p" class="cta-button" target="_blank">Clique aqui e inscreva-se agora no MasterTech</a>
         </div>
     </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Coluna de Contato -->
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>
+                        <a href="mailto:meureparador.com@gmail.com" style="color: white; text-decoration: none;">
+                            <i class="fas fa-envelope"></i> meureparador.com@gmail.com
+                        </a>
+                        <br>
+                        <a href="https://chat.whatsapp.com/FCJXuBwazuoKkcQmXSt9c9" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none;">
+                            <i class="fab fa-whatsapp"></i> Grupo Oficial
+                        </a>
+                    </p>
+                </div>
+
+                <!-- Coluna de Redes Sociais -->
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="redes-sociais">
+                        <a href="https://www.linkedin.com/in/felipe-mota-03570887/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://chat.whatsapp.com/FCJXuBwazuoKkcQmXSt9c9" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.instagram.com/meureparador.co?igsh=c3k5ZHE0eTU2NHk=" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/meurepardor" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="https://medium.com/@meureparador.com" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-medium"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script>
         // Controle de clicks nos CTAs
