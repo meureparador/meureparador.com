@@ -221,3 +221,118 @@
     </section>
 </body>
 </html>
+<section class="especialista">
+    <div class="container">
+        <div class="especialista-content">
+            <img src="images/especialista.jpg" alt="Especialista MasterTech" class="especialista-img">
+            <div class="especialista-info">
+                <h2>Conheça o Especialista</h2>
+                <div class="destaque-card">
+                    <div class="icone"><i class="fas fa-tools"></i></div>
+                    <h3>12+ anos transformando o setor automotivo</h3>
+                    <p>Experiência prática em:</p>
+                    <ul class="expertise-list">
+                        <li><i class="fas fa-check"></i> Gestão de oficinas mecânicas e funilarias</li>
+                        <li><i class="fas fa-check"></i> Desenvolvimento de redes de prestadores de serviços</li>
+                        <li><i class="fas fa-check"></i> Otimização de operações em 7 estados brasileiros</li>
+                    </ul>
+                </div>
+                
+                <div class="formacao-grid">
+                    <div class="formacao-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>Comunicação Social + Pós em Gestão de Pessoas</h4>
+                    </div>
+                    <div class="formacao-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>Especialista em Tecnologias Educacionais</h4>
+                    </div>
+                </div>
+
+                <p class="cta-text">"Já implementei melhorias em mais de 200 prestadores de serviços - agora vou compartilhar esse conhecimento com você!"</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Estilos Responsivos */
+    .especialista {
+        padding: 4rem 0;
+        background: #f8f9fa;
+    }
+
+    .especialista-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .especialista-img {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 15px;
+        margin: 0 auto;
+    }
+
+    .destaque-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin: 2rem 0;
+    }
+
+    .expertise-list {
+        list-style: none;
+        margin-top: 1rem;
+    }
+
+    .expertise-list li {
+        padding: 0.5rem 0;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .formacao-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin: 2rem 0;
+    }
+
+    .formacao-card {
+        background: #2c3e50;
+        color: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .formacao-card i {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .cta-text {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #e74c3c;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        .especialista-content {
+            grid-template-columns: 1fr 2fr;
+            align-items: start;
+        }
+        
+        .especialista-img {
+            position: sticky;
+            top: 2rem;
+        }
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
